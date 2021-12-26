@@ -1,0 +1,15 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+
+.score {
+  font-size: $font-lg;
+  color: $light;
+
+  @include breakpoint-down(small) {
+    font-size: $font-med-lg;
+  }
+
+  &__span {
+    color: $light-yellow;
+  }
+}

@@ -1,0 +1,32 @@
+@import "../../sass/global";
+@import "../../sass/animations";
+@import "../../sass/mixins";
+
+.loader {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  background-color: $light;
+  animation: my-rotate 0.5s infinite ease-in-out;
+  margin-top: 20px;
+
+  @include breakpoint-down(small) {
+    height: 70px;
+    width: 70px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    background-color: $light-yellow;
+    animation: load-after-desktop 0.5s infinite ease-in-out;
+
+    @include breakpoint-down(small) {
+      width: 70px;
+      animation: load-after-mobile 0.5s infinite ease-in-out;
+    }
+  }
+}

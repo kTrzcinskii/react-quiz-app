@@ -1,0 +1,97 @@
+@import "./variables";
+@import "./mixins";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/wallpaper.jpg");
+  background-size: cover;
+  background-position: center center;
+  font-family: "Abel", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 250;
+}
+
+.button {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: $font-med-lg;
+  font-weight: 600;
+  width: 140px;
+  height: 50px;
+  border-radius: 15px;
+  border: none;
+  background-color: $brown;
+  border: 2px solid $brown;
+  color: $light;
+  transition: all 0.3s ease-in-out;
+
+  @include breakpoint-down(small) {
+    width: 100px;
+    height: 40px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $light-yellow;
+    color: $brown;
+  }
+
+  @include breakpoint-down(small) {
+    font-size: $font-sm;
+    margin-bottom: 0;
+  }
+
+  &.larger {
+    width: 200px;
+    height: 70px;
+    opacity: 0;
+    cursor: auto;
+    margin-top: 20px;
+    &.show {
+      opacity: 1;
+      cursor: pointer;
+    }
+    @include breakpoint-down(small) {
+      width: 140px;
+      height: 50px;
+    }
+  }
+
+  &.answer {
+    border-radius: 0;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 45px;
+
+    @include breakpoint-down(small) {
+      height: 35px;
+    }
+
+    &:disabled {
+      cursor: auto;
+
+      &:hover {
+        background-color: $brown;
+        color: $light;
+      }
+    }
+  }
+}

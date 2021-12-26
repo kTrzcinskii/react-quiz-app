@@ -1,0 +1,26 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+
+.wrong-input {
+  height: 70px;
+  border: 2px solid $red;
+  background-color: $light-red;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+
+  @include breakpoint-down(small) {
+    height: 40px;
+  }
+}
+
+.wrong-input p {
+  font-size: $font-med-lg;
+  color: $red;
+  margin-left: 10px;
+
+  @include breakpoint-down(small) {
+    font-size: $font-med;
+    margin-left: 5px;
+  }
+}

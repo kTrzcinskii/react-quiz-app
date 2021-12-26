@@ -1,0 +1,27 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+
+.final-score {
+  font-size: $font-xlg;
+  color: $light;
+  margin-bottom: 20px;
+
+  @include breakpoint-down(small) {
+    font-size: $font-lg;
+    margin-bottom: 10px;
+  }
+
+  &__span {
+    color: $light-yellow;
+  }
+}
+
+.wanna-play {
+  font-size: $font-lg;
+  text-align: center;
+  color: $light-yellow;
+
+  @include breakpoint-down(small) {
+    font-size: $font-med-lg;
+  }
+}

@@ -1,0 +1,35 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+
+.question-card {
+  width: 95%;
+
+  font-size: $font-lg;
+
+  @include breakpoint-down(small) {
+    font-size: $font-med;
+  }
+}
+
+.question-number {
+  color: $light;
+  margin-bottom: 10px;
+}
+
+.question {
+  color: $light-yellow;
+  margin-bottom: 10px;
+}
+
+//answer color buttons
+.red {
+  color: $red !important;
+  border-color: $red !important;
+  background-color: $light-red !important;
+}
+
+.green {
+  color: $green !important;
+  border-color: $green !important;
+  background-color: $light-green !important;
+}
